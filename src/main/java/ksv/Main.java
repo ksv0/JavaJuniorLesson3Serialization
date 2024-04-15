@@ -1,7 +1,7 @@
 package ksv;
 
 
-import java.io.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,18 +32,19 @@ public class Main {
             }
         };
         System.out.println(list);
-        saveStudent(FILE_BIN, list);
-        saveStudent(FILE_XML, list);
-        saveStudent(FILE_JSON, list);
 
-        System.out.println(loadStudent(FILE_BIN));
+        saveStudent(FILE_BIN, list);
         // тут мы используем легаси сериализатор который учитывает ключевое слово "transient"
         // а следовательно не сериализует поле GPA
-        System.out.println(loadStudent(FILE_XML));
+        System.out.println(loadStudent(FILE_BIN));
+        saveStudent(FILE_XML, list);
         // а тут,
-        System.out.println(loadStudent(FILE_JSON));
+        System.out.println(loadStudent(FILE_XML));
+        saveStudent(FILE_JSON, list);
         // и тут используем подключенную библиотеку Jackson,
         // которая использует геттеры для получения данных и не учитывает "transient"
+        System.out.println(loadStudent(FILE_JSON));
+
     }
 
 }
