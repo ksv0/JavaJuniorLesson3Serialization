@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<students>
+  <students>
+    <name>Ivan</name>
+    <age>25</age>
+    <gpa>4.5</gpa>
+  </students>
+  <students>
+    <name>Petr</name>
+    <age>20</age>
+    <gpa>3.5</gpa>
+  </students>
+  <students>
+    <name>Sidor</name>
+    <age>30</age>
+    <gpa>5.0</gpa>
+  </students>
+</students>
